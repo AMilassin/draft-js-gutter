@@ -16,6 +16,9 @@ export class EditorGutter extends Component {
 
   onChange(editorState) {
     this.setState({editorState: editorState});
+    if (this.props.onChange) {
+      this.props.onChange(editorState);
+    }
   }
 
   render() {
